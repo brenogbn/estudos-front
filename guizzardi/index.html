@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- 2f 70 6a -->>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Batista & Guizzardi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #2f706a;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #2f706a;
+    font-size: 50px;
+  }
+  .logo {
+    color: #2f706a;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #2f706a;
+  }
+  .carousel-indicators li {
+    border-color: #2f706a;
+  }
+  .carousel-indicators li.active {
+    background-color: #2f706a;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #2f706a; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #2f706a;
+    background-color: #fff !important;
+    color: #2f706a;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #2f706a !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #2f706a;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #2f706a;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #2f706a !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2f706a;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Batista & Guizzardi</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#pricing">Atendimento</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Batista & Guizzardi</h1> 
+  <p>Assessoria Contábil - Soluções em Contabilidade</p> 
+  <!--form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form-->
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Sobre</h2><br>
+      <h4>Batista & Guizzardi - Assessoria e Consultoria Contábil</h4><br>
+      <p>O escritório contábil Batista & Guizzardi oferece uma gestão de qualidade desde 1989 com uma meta bem definida: prestar serviços com profissionalismo e qualidade, com a garantia de excelência no serviço prestado. Contamos com uma equipe técnica composta por profissionais bem capacitados para dar suporte necessário aos clientes, buscando integração e funcionamento harmonioso das soluções apresentadas.</p>
+      <p>Soluções completas nas áreas de contabilidade em geral, departamento pessoal, consultoria empresarial, etc.</p>
+      <br><button class="btn btn-default btn-lg">Fale Conosco</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-briefcase logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-briefcase logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Batista & Guizzardi Assessoria Contábil</h2><br>
+      <h4><strong>MISSÃO:</strong> Disponibilizar aos nossos clientes serviços contábeis e assessoria para que possam agir em conformidade com as legislações fiscais, tributárias, trabalhistas, previdenciárias, contábeis e demais legislações vigentes.</h4><br>
+      <p><strong>VISÃO:</strong> Ser reconhecida pelos seus serviços na área de contabilidade e assessoria, colocando-se como parceira dos clientes, auxiliando-os estrategicamente na tomada de decisões e mantendo-os alinhados às legislações vigentes.</p>
+      <p><strong>VALORES:</strong> Nossos valores norteiram nossa trajetória, são eles: Excelência nos serviços prestados, Qualidade, Respeito ao Ser Humano, Honestidade, Transparência, Profissionalismo, Ética e Melhoria Contínua.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Serviços</h2>
+  <h4>Serviços oferecidos</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-stats logo-small"></span>
+      <h4>Contabilidade</h4>
+      <p>Soluções amplas e completas em Contabilidade. Com nossas soluções, você terá a liberdade para focar no que realmente interessa: a sua empresa.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-book logo-small"></span>
+      <h4>Fiscal</h4>
+      <p>Planejamento tributário, Processamento e Apuração de impostos federais, estaduais e municipais e demais encargos que incidam sobre a sua empresa.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user logo-small"></span>
+      <h4>Departamento Pessoal</h4>
+      <p>Solução completa, desde a admissão de pessoas, recisões contratuais, elaboração e processamento de folha de pagamento e demais encargos.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-duplicate logo-small"></span>
+      <h4>Empresarial</h4>
+      <p>Abertura, encerramento, atualização de contrato social. Consultoria em planejamento societário, com ênfase na proteção patrimonial e sucessão empresarial.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-dashboard logo-small"></span>
+      <h4>Valoração</h4>
+      <p>Realizamos levantamento patrimonial e cálculo para determinar o <i>valuation</i> da empresa para fins de alienação ou mudança de quadro societário.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-tree-deciduous logo-small"></span>
+      <h4 style="color:#303030;">Demais Áreas</h4>
+      <p>Gestão Empresarial, Balanços, Gestão Organizacional, Planejamento Estratégico, Gestão de Processos, Custos, Orçamentos, emissão de NFe, Indicadores, etc.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) id=portfolio -->
+<div class="container-fluid text-center bg-grey">
+  <h2>Contabilidade & Consultoria</h2><br>
+  <h4>Com a Batista & Guizzardi, você não precisa mais se preocupar com</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="escritorio.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Gestão de Pessoas</strong></p>
+        <p>Folha de pagamento, admissão, recisão, etc.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="calculos.jpg" alt="New York" width="400" height="300">
+        <p><strong>Contábil & Fiscal</strong></p>
+        <p>Fluxo de caixa, cálculo de taxas, impostos e contribuições.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="arquivo.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>Arquivo</strong></p>
+        <p>Armazenamento de documentos fiscais.</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>O quê nossos clientes dizem?</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Após ter contratado os serviços contábeis, pude desenvolver meu negócio com mais confiança."<br><span>Sergio, proprietário de uma papelaria.</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Decidi largar a informalidade, abrir um CNPJ e contratar uma funcionária. Não sabia por onde começar e a Batista e Guizzardi foi fundamental."<br><span>Regina, proprietária de uma lancheria.</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Poder contar com uma assessoria contábil é fundamental, eu passo tudo pra eles e mantenho a minha empresa organizada."<br><span>José Carlos, proprietário de um açougue.</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Atendimento</h2>
+    <h4>Temos os serviços ideais para você e sua empresa</h4>
+  </div>
+  <div class="row slideanim">
+   
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>MEI</h1>
+          <p>Empreendedores individuais</p>
+        </div>
+        <div class="panel-body" style="text-align: left;">
+          <p>Soluções completas para a sua primeira empresa.</p>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Abertura de CNPJ</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Declaração SIMEI</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Emissão de Nota Fiscal</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Arquivo de documentos</strong><br>
+        </div>
+        <div class="panel-footer">
+          <!--h3>$19</h3>
+          <h4>per month</h4-->
+          <button class="btn btn-lg">Fale Conosco</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>ME</h1>
+          <p>Pequenas e Médias empresas</p>
+        </div>
+        <div class="panel-body" style="text-align: left;">
+            <p>Soluções completas para pequenas e médias empresas.</p>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Abertura / Alteração de CNPJ</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Registro no Simples Nacional</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Registros Federais, Estaduais e Municipais</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Emissão de Nota Fiscal</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Arquivo de documentos</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Declaração de tributos, taxas e engargos</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Controle de folha de pagamento</strong><br>
+        </div>
+        <div class="panel-footer">
+          <!-- h3>$29</h3>
+          <h4>per month</h4 -->
+          <button class="btn btn-lg">Fale Conosco</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>LTDA</h1>
+          <p>Grandes Empresas</p>
+        </div>
+        <div class="panel-body"  style="text-align: left;">
+            <p>Soluções completas para grandes empresas</p>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Abertura / Alteração de CNPJ e filiais</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Registros Federais, Estaduais e Municipais</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Emissão de Nota Fiscal</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Arquivo de documentos</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Declaração de tributos, taxas e engargos</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Planejamento Fiscal e Societário</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Controle de folha de pagamento</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Controle de contas a pagar e receber</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Emissão de Balancetes</strong><br>
+            <span class="glyphicon glyphicon-ok"></span> <strong>Consoltoria Especializada</strong><br>
+
+        </div>
+        <div class="panel-footer">
+          <!--h3>$49</h3>
+          <h4>per month</h4-->
+          <button class="btn btn-lg">Fale Conosco</button>
+        </div>
+      </div>      
+    </div>    
+    <div class="col-sm-12 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Temos soluções completas para Profissionais Liberais</h1>
+            <img src="aaa.jpg" style="width: 100%">
+          </div>
+        </div>      
+      </div> 
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Contato</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Fale conosco e entraremos em contato em breve.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Av. Martins Bastos, 770, Porto Alegre, RS</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +55 51 3365-7231</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> email?</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentário" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <!-- p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p -->
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
